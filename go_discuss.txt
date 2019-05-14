@@ -1,0 +1,46 @@
+
+
+Program
+- small (300 lines of code, of which >250 is probably logging and error handling)
+- self-contained
+	- no third party libraries
+	- one executable (statically linked by default), no dependencies
+
+Language
+- simplicity
+- strongly typed
+- interesting features to make one's life easy
+	- defer
+	- interfaces (fprintf to Writer)
+	- concurrency with goroutines and channels
+		- goroutines _very_ light 
+			- small stack etc
+		- channels like pipes/queues 
+			- with blocking
+			- with capacity
+			- with multiple listen/send
+			- with multiplexing select
+- fast
+- as a set of features, it does look kind of like what C would look like after you've implemented libraries for simplifying your life
+- non intrusive GC
+- not least of all, rather easy to learn and write for
+
+
+Slightly annoying (or very annoying, depending on the person):
+- one way to do indentation
+- one way to do curly braces placement
+- compilation errors on unused variable/unused library
+
+
+Things people complain about:
+- un-googlable name
+- stuck in 70's
+- no function/operator overloading
+- no generics
+- no ternary operator
+- unexpected behaviour if you don't know what you're doing
+
+
+
+
+

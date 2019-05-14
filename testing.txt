@@ -1,0 +1,9 @@
+# sample tests
+curl http://localhost:8102/scan --data-binary 'I am not a virus' 
+curl http://localhost:8102/scan --data-binary 'X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*' 
+
+# multithreaded test
+for x in `seq 1 10`; do (curl -X POST http://localhost:8102/scan --data-binary 'X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*' -v &) ; done
+
+# compile for linux
+GOOS=linux GOARCH=amd64 go build 
